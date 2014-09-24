@@ -4,16 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-
-    <%= yield %>
+<body>
+      <div class="contain-to-grid">
+        <nav class="top-bar">
+          <ul class="title-area">
+            <li class="name">
+            <h1><a href="/">My World</a></h1>
+            </li>
+          </ul>
+          <section class="top-bar-section">
+            <ul>
+              <li class="divider"></li>
+              <li><a href="#">Bilgisayar Bilimleri</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Seyahat</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Edebiyat<v></a></li>
+              <li class="divider"></li>
+            </ul>
+             <ul class="right">
+               <li><a href="#">Arşiv</a></li>
+               <li class="divider"></li>
+               <li><a href="#">Hakkımda<a></li>
+        </ul>
+      </section>
+        </nav>
+        </div>
+        <div class="row">
+          <%= yield %>
+        </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

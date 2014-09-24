@@ -38,3 +38,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'foundation-rails'
+gem 'bcrypt-ruby'
+gem 'compass'
+# gem 'zurb-foundation'
