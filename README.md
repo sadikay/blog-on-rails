@@ -1,4 +1,4 @@
 sadikay
 =======
 
-My personality web page 
+My personal web page 
