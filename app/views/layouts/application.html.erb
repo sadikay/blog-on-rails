@@ -22,17 +22,19 @@
           <section class="top-bar-section">
             <ul>
               <li class="divider"></li>
-              <li><a href="#">Bilgisayar Bilimleri</a></li>
+              <li><%=link_to "Bilgisayar Bilimleri", category_path(1) %></li>
               <li class="divider"></li>
-              <li><a href="#">Seyahat</a></li>
+              <li><%=link_to "Seyahat" , category_path(2)%></li>
               <li class="divider"></li>
-              <li><a href="#">Edebiyat<v></a></li>
+              <li><%=link_to "Edebiyat", category_path(3)%></li>
+              <li class="divider"></li>
+              <li><%=link_to "Galeri", category_path(4)%></li>
               <li class="divider"></li>
             </ul>
              <ul class="right">
-               <li><a href="#">Arşiv</a></li>
+               <li><a href="<%=articles_path%>">Arşiv</a></li>
                <li class="divider"></li>
-               <li><a href="#">Hakkımda<a></li>
+               <li><a href="<%=welcome_about_path%>">Hakkımda</a></li>
         </ul>
       </section>
         </nav>
@@ -40,6 +42,9 @@
         <div class="row">
           <%= yield %>
         </div>
-    <%= javascript_include_tag "application" %>
+        <%= javascript_include_tag "application" %>
+        <footer>
+            Copyright &copy; 2014 sadikay.com
+       </footer>
   </body>
 </html>

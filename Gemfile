@@ -40,4 +40,6 @@ gem 'spring',        group: :development
 gem 'foundation-rails'
 gem 'bcrypt-ruby'
 gem 'compass'
-# gem 'zurb-foundation'
+gem 'rails-uploader'
+# gem 'zurb-foundation
+gem 'carrierwave'
