@@ -1,5 +1,7 @@
 <h3><%=@category.name %> makaleleri</h3>
 <% @category.articles.each do |article|%>
-  <%= render article %>
+  <dl>
+    <%= render article %>
+   </dl>
   <hr>
 <%end%>

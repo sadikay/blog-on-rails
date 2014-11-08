@@ -1,1 +1,1 @@
-<div align="left">  <table>    <% @articles.each do |article| %>        <dt><%= article.title %></dt>        <blockquote><%= article.description%></blockquote>        <hr>    <% end %>  </table></div>
+<div align="left">  <table>    <% @articles.each do |article| %>        <dt><%= article.title %></dt>        <blockquote><%= article.description%></blockquote>        <%= image_tag article.logo.thumb.url if article.logo.present? %>        <hr>    <% end %>  </table></div>

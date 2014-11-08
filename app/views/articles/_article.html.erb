@@ -1,4 +1,4 @@
 <dt><%= article.title %></dt>
 <blockquote><%= article.description%></blockquote>
-<dd class="th"><%= article.logo %></dd>
+<%= image_tag article.logo.thumb.url if article.logo.present? %>
 <p><%= article.text%></p>
