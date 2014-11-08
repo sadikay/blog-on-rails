@@ -1,1 +1,1 @@
-<h3><%=@category.name %> makaleleri</h3><% @category.articles.each do |article|%>    <%= render article %>    <hr><%end%>
+<h3><%=@category.name %> makaleleri</h3><table border="1"><% @category.articles.each do |article|%>    <tr>      <td><%= render article %> <%= link_to "Edit", edit_admin_article_path(article) %></td>    </tr><%end%></table>
