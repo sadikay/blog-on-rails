@@ -1,6 +1,6 @@
 class Admin::ArticlesController < Admin::BaseAdminController
   def index
-    @articles=Article.all
+    @articles=Article.all.order('id desc')
   end
 
   def create
@@ -25,7 +25,6 @@ class Admin::ArticlesController < Admin::BaseAdminController
 
   def update
     @article= Article.find params[:id]
-    @category= Category.find params[:id]
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to admin_path, notice: 'Makale Güncellendi' }
