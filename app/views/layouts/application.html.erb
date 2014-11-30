@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title><%= content_for?(:title) ? yield(:title) : "" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= csrf_meta_tags %>
-    </head>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= csrf_meta_tags %>
+</head>
 
-    <center>
-<div class="slide-img">
-  <ul class="example-orbit" data-orbit>
+<center>
+  <div class="orbit-container">
+    <ul class="example-orbit" data-orbit>
       <li>
-      <img src="/uploads/article/logo/13/thumb_launch-orbit.jpg" alt="slide 1" />
-      <div class="orbit-caption">
-          Caption One.
+        <img src="/uploads/image/image/24/thumb_budapeste1.jpg" alt="slide 1"/>
+        <div class="orbit-caption">
+          Budapeşte
         </div>
       </li>
       <li class="active">
-        <img src="/uploads/article/logo/11/thumb_andromeda-orbit.jpg" alt="slide 2" />
+        <img src="/uploads/image/image/27/thumb_istanbul.jpg" alt="slide 2"/>
         <div class="orbit-caption">
-          Caption Two.
+          İstanbul
         </div>
       </li>
       <li>
-        <img src="/uploads/article/logo/12/thumb_satelite-orbit.jpg" alt="slide 3" />
+        <img src="/uploads/image/image/28/thumb_antakya_site_2.jpg" alt="slide 3"/>
         <div class="orbit-caption">
-          Caption Three.
+          Antakya
         </div>
       </li>
     </ul>
-    </div>
-        </center>
+  </div>
+</center>
 
 <body>
-      <div class="contain-to-grid">
-        <nav class="top-bar">
-          <ul class="title-area">
-            <li class="name">
-            <h1><a href="/">My World</a></h1>
-            </li>
-          </ul>
-          <section class="top-bar-section">
-            <ul>
-              <li class="divider"></li>
-              <li><%=link_to "Bilgisayar Bilimleri", category_path(1) %></li>
-              <li class="divider"></li>
-              <li><%=link_to "Seyahat" , category_path(2)%></li>
-              <li class="divider"></li>
-              <li><%=link_to "Edebiyat", category_path(3)%></li>
-              <li class="divider"></li>
-              <li><%=link_to "Galeri", category_path(4)%></li>
-              <li class="divider"></li>
-            </ul>
-             <ul class="right">
-               <li><a href="<%=articles_path%>">Arşiv</a></li>
-               <li class="divider"></li>
-               <li><a href="<%=welcome_about_path%>">Hakkımda</a></li>
-        </ul>
-      </section>
-        </nav>
-        </div>
-        <div class="row">
-          <%= yield %>
-        </div>
-        <%= javascript_include_tag "application" %>
-        <footer>
-            Copyright &copy; 2014 sadikay.com
-       </footer>
-  </body>
+<div class="contain-to-grid">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">My World</a></h1>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul>
+        <li class="divider"></li>
+        <li><%= link_to "Bilgisayar Bilimleri", category_path(1) %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Seyahat", category_path(2) %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Edebiyat", category_path(3) %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Galeri", category_path(4) %></li>
+        <li class="divider"></li>
+      </ul>
+      <ul class="right">
+        <li><a href="<%= articles_path %>">Arşiv</a></li>
+        <li class="divider"></li>
+        <li><a href="<%= welcome_about_path %>">Hakkımda</a></li>
+      </ul>
+    </section>
+  </nav>
+</div>
+
+<div class="row">
+  <%= yield %>
+</div>
+<div>
+  Resim değiştir1 - 2 - 3
+</div>
+<%= javascript_include_tag "application" %>
+<footer>
+  Copyright &copy; 2014 sadikay.com
+</footer>
+</body>
 </html>

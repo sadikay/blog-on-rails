@@ -15,10 +15,10 @@
  */
 
 .slide-img {
-    background-color: #a1ac95;
+    background-color: lightgrey;
     width:100%;
     height:100%;
-    box-shadow:inset 10px 15px 85px blue;
-    -webkit-box-shadow:inset 0px 5px 100px dodgerblue;
-    -moz-box-shadow:inset 0px 20px 85px grey;
+    box-shadow:inset 10px 15px 85px lightgrey;
+    -webkit-box-shadow:inset 0px 5px 100px lightgrey;
+    -moz-box-shadow:inset 20px 20px 20px darkblue;
 }

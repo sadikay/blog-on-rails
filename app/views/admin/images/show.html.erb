@@ -1,3 +1,5 @@
-<dd class="th">
-	<%= image_tag @image.image.thumb.url %>
-</dd>
+<table>
+  <tr>
+	<td><%= image_tag @images.image.url(:thumb) %></td>
+  </tr>
+</table>

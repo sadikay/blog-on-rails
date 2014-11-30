@@ -16,4 +16,10 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation({
+    orbit: {
+        animation: 'slide',
+        timer_speed: 4000,
+        pause_on_hover: false,
+        container_class: 'orbit-container'
+    }}); });
