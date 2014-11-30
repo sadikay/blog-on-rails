@@ -1,12 +1,12 @@
 class Admin::ArticlesController < Admin::BaseAdminController
   def index
-    @articles=Article.all.order('id desc')
+    @articles = Article.all.order('id desc')
   end
 
   def create
-    @article= Article.new article_params
+    @article = Article.new article_params
     if @article.save
-      flash[:notice]='Makale başarı ile eklendi'
+      flash[:notice] = 'Makale başarı ile eklendi'
       redirect_to admin_path
     else
       render :new
@@ -15,16 +15,16 @@ class Admin::ArticlesController < Admin::BaseAdminController
 
   def edit
     @articles = Article.find(params[:id])
-    @category= Category.all
+    @category = Category.all
   end
 
   def new
-    @articles= Article.new
-    @category= Category.all
+    @articles = Article.new
+    @category = Category.all
   end
 
   def update
-    @article= Article.find params[:id]
+    @article = Article.find params[:id]
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to admin_path, notice: 'Makale Güncellendi' }
