@@ -1,7 +1,21 @@
-<h3><%=@category.name %> <%= 'makaleleri' if !(@category.name=='Galeri') %></h3>
-<% @category.articles.each do |article|%>
-  <dl>
-    <%= render article %>
-   </dl>
-  <hr>
-<%end%>
+<% if @category.name == 'Galeri' %>
+    <br>
+    <div>
+      <ul class="clearing-thumbs small-block-grid-4" data-clearing>
+        <% @images.each do |image| %>
+            <% if image.image.present? %>
+                <li><a href="<%= image.image.thumb.url %>">
+                  <img data-caption="<%= image.title %>" src="<%= image.image.thumb.url %>"></a></li>
+            <% end %>
+        <% end %>
+      </ul>
+      <div>
+<% else %>
+    <h3><%= @category.name %> articles</h3>
+    <% @category.articles.each do |article| %>
+        <dl>
+          <%= render article %>
+        </dl>
+        <hr>
+    <% end %>
+<% end %>
