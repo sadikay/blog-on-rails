@@ -17,13 +17,13 @@
       <li>
         <img src="/uploads/image/image/24/thumb_budapeste1.jpg" alt="slide 1"/>
         <div class="orbit-caption">
-          Budapeşte
+          Budapest
         </div>
       </li>
       <li class="active">
         <img src="/uploads/image/image/27/thumb_istanbul.jpg" alt="slide 2"/>
         <div class="orbit-caption">
-          İstanbul
+          Istanbul
         </div>
       </li>
       <li>
@@ -41,25 +41,25 @@
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="/">My World</a></h1>
+        <h1><a href="/">Home</a></h1>
       </li>
     </ul>
     <section class="top-bar-section">
       <ul>
         <li class="divider"></li>
-        <li><%= link_to "Bilgisayar Bilimleri", category_path(1) %></li>
+        <li><%= link_to "Computer Science", category_path(1) %></li>
         <li class="divider"></li>
-        <li><%= link_to "Seyahat", category_path(2) %></li>
+        <li><%= link_to "Travels", category_path(2) %></li>
         <li class="divider"></li>
-        <li><%= link_to "Edebiyat", category_path(3) %></li>
+        <li><%= link_to "Art", category_path(3) %></li>
         <li class="divider"></li>
-        <li><%= link_to "Galeri", category_path(4) %></li>
+        <li><%= link_to "Gallery", category_path(4) %></li>
         <li class="divider"></li>
       </ul>
       <ul class="right">
-        <li><a href="<%= articles_path %>">Arşiv</a></li>
+        <li><a href="<%= articles_path %>">Archive</a></li>
         <li class="divider"></li>
-        <li><a href="<%= welcome_about_path %>">Hakkımda</a></li>
+        <li><a href="<%= welcome_about_path %>">About Me</a></li>
       </ul>
     </section>
   </nav>
@@ -67,9 +67,6 @@
 
 <div class="row">
   <%= yield %>
-</div>
-<div>
-  Resim değiştir1 - 2 - 3
 </div>
 <%= javascript_include_tag "application" %>
 <footer>

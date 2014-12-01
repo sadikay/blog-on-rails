@@ -1,4 +1,11 @@
 <dt><%= article.title %></dt>
 <blockquote><%= article.description%></blockquote>
-<%= image_tag article.logo.thumb.url if article.logo.present? %>
+<% if article.logo.present? %>
+    <div>
+      <ul class="clearing-thumbs small-block-grid-4" data-clearing>
+    <li><a href="<%= article.logo.thumb.url %>">
+      <img src="<%= article.logo.thumb.url %>"></a></li>
+          </ul>
+        </div>
+<% end %>
 <p><%= article.text%></p>
